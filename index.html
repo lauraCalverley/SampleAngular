@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<!--<html lang="en">-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Skeletor</title>
+  <meta name="description" content="">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <!--<meta name="google-signin-client_id" content="868006105062-c4p6rdb08oahoibelq9imsi29r5kiqrm.apps.googleusercontent.com">-->
+
+  <base href="/" />
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="resources/css/app.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Icons -->
+
+
+  <!-- Bower Package js files -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/angular-google-plus/dist/angular-google-plus.min.js"></script>
+
+
+  <!-- App js files -->
+  <script src="app.js"></script>
+
+  <!-- Controllers -->
+  <script src="controllers/controllers.js"></script>
+  <script src="controllers/DashboardController.js"></script>
+  <script src="controllers/LoginController.js"></script>
+  <script src="controllers/DealerController.js"></script>
+  <script src="controllers/DealersController.js"></script>
+  <script src="controllers/UserController.js"></script>
+  <script src="controllers/UsersController.js"></script>
+  <script src="controllers/CustomerController.js"></script>
+  <script src="controllers/CustomersController.js"></script>
+  <script src="controllers/RoleController.js"></script>
+  <script src="controllers/RolesController.js"></script>
+  <script src="controllers/PermissionController.js"></script>
+  <script src="controllers/PermissionsController.js"></script>
+  <script src="controllers/HeaderController.js"></script>
+  <script src="controllers/CustomerDialogController.js"></script>
+  <script src="controllers/SiteDialogController.js"></script>
+  <script src="controllers/SiteController.js"></script>
+  <script src="controllers/SitesController.js"></script>
+  <script src="controllers/SystemController.js"></script>
+  <script src="controllers/SystemDialogController.js"></script>
+  <script src="controllers/ContactDialogController.js"></script>
+  <script src="controllers/NoteDialogController.js"></script>
+  <script src="controllers/BillingDialogController.js"></script>
+  <script src="controllers/AvDialogController.js"></script>
+  <script src="controllers/AdcDialogController.js"></script>
+
+  <!-- Factories -->
+  <script src="services/SubdomainService.js"></script>
+  <script src="services/DealerService.js"></script>
+  <script src="services/UserService.js"></script>
+  <script src="services/RoleService.js"></script>
+  <script src="services/PermissionService.js"></script>
+  <script src="services/CustomerService.js"></script>
+  <script src="services/HelperService.js"></script>
+  <script src="services/CreditService.js"></script>
+  <script src="services/SiteService.js"></script>
+  <script src="services/PhoneService.js"></script>
+  <script src="services/AddressService.js"></script>
+  <script src="services/SystemService.js"></script>
+  <script src="services/ContactService.js"></script>
+  <script src="services/NoteService.js"></script>
+  <script src="services/OptionService.js"></script>
+  <script src="services/BillingService.js"></script>
+
+  <!-- Directives -->
+
+</head>
+
+<body ng-app="skeletor">
+
+  <div ng-controller="HeaderController" ng-hide="hideHeader">
+
+    <div layout="column" layout-fill>
+      <md-toolbar style="background:#23262f">
+        <div class="md-toolbar-tools">
+          <h2 md-truncate flex><img src="skeletorLogo32x185.png" /></h2>
+
+          <md-button ui-sref="dashboard">Dashboard</md-button>
+          <md-button ui-sref="dealers">Dealers</md-button>
+          <md-button ui-sref="users">Users</md-button>
+          <md-button ui-sref="customers">Customers</md-button>
+          <md-button ui-sref="sites">Sites</md-button>
+          <md-button ui-sref="roles">Roles</md-button>
+          <md-button ui-sref="permissions">Permissions</md-button>
+
+
+
+          <md-button ng-click="logout()">Sign Out</md-button>
+        </div>
+      </md-toolbar>
+    </div>
+
+
+  </div>
+
+
+  <ui-view></ui-view>
+
+
+
+
+</body>
+
+</html>
